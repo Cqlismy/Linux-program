@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
     fd = open("hello.txt", O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
     if (fd) {
-        write(fd, "hello.txt", strlen("Hello World"));
+        write(fd, "Hello World", strlen("Hello World"));
         close(fd);
     }
 
