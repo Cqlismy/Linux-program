@@ -1,5 +1,5 @@
-all: string.c
-	gcc -g string.c -o string
+all: main.c mystring.c
+	gcc -g main.c mystring.c -o main
 
 clean:
-	rm -rf sting core
+	rm -rf main core
