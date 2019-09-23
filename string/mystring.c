@@ -26,3 +26,29 @@ char *mystrchr(const char *s, int c)
 	return (char *)s;
 }
 
+/**
+ * mymemcpy - Compare two areas of memory
+ * @cs: One area of memory
+ * @ct: Another area of memory
+ */
+int mymemcpy(const void *cs, const void *ct, int count)
+{
+	const unsigned char *su1, *su2;
+	int res = 0;
+
+	for (su1 = cs, su2 = ct; 0 < count; ++su1, ++su2, count--)
+		if ((res = *su1 - *su2) != 0)
+			break;
+	return res;
+}
+
+
+
+
+
+
+
+
+
+
+
