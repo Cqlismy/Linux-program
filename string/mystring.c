@@ -42,5 +42,26 @@ int mymemcpy(const void *cs, const void *ct, int count)
 	return res;
 }
 
+/**
+ * mystrstr - Find the first substring int a %NUL terminated string
+ * @s1: The string to be searched
+ * @s2:	The string to search for 
+ */
+char *mystrstr(const char *s1, const char *s2)
+{
+	int l1,l2;
+
+	l2 = mystrlen(s2);
+	if (!l2)
+		return (char *)s1;
+	l1 = mystrlen(s1);
+	while (l1 >= l2) {
+		l1--;
+		if (!mymemcpy(s1, s2, l2))
+			return (char *)s1;
+		s1++;
+	}
+	return NULL;
+} 
 
 
